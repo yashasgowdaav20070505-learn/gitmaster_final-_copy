@@ -1,0 +1,265 @@
+/* GitMaster Semantic Theme Token System
+   Theme 1 (Strict Default): editorial-cream
+   Theme 2 (Optional): jet-cherry (Jet Black, Smoke Grey & Cherry Red)
+*/
+
+:root,
+:root[data-theme="editorial-cream"] {
+  --bg-canvas: #F3EEE3;
+  --bg-elevated: #FAF7F0;
+  --bg-muted: #E6DFD1;
+  --text-primary: #111111;
+  --text-muted: #524E48;
+  --border-primary: #111111;
+  --shadow-offset: #111111;
+  --accent-primary: #D9541E;
+  --accent-primary-hover: #BF4615;
+  --accent-contrast: #F3EEE3;
+
+  --terminal-bg: #111111;
+  --terminal-text: #F3EEE3;
+  --terminal-accent: #D9541E;
+  --committed-bg: #1E6F50;
+  --committed-text: #FAF7F0;
+}
+
+:root[data-theme="jet-cherry"] {
+  --bg-canvas: #0B0B0C;
+  --bg-elevated: #141416;
+  --bg-muted: #1E1E22;
+  --text-primary: #F4F4F6;
+  --text-muted: #8A8D93;
+  --border-primary: #8A8D93;
+  --shadow-offset: #000000;
+  --accent-primary: #C8102E;
+  --accent-primary-hover: #A30D25;
+  --accent-contrast: #FFFFFF;
+
+  --terminal-bg: #070708;
+  --terminal-text: #F4F4F6;
+  --terminal-accent: #C8102E;
+  --committed-bg: #1E6F50;
+  --committed-text: #FFFFFF;
+}
+
+/* Fixed swatch dots for ProfileThemeSelector previews (independent of active theme) */
+.theme-swatch-cream-bg {
+  background-color: #F3EEE3;
+}
+.theme-swatch-cream-ink {
+  background-color: #111111;
+}
+.theme-swatch-cream-accent {
+  background-color: #D9541E;
+}
+.theme-swatch-jet-bg {
+  background-color: #0B0B0C;
+}
+.theme-swatch-jet-smoke {
+  background-color: #8A8D93;
+}
+.theme-swatch-jet-accent {
+  background-color: #C8102E;
+}
+
+/* Instant Semantic Utility Overrides when Jet Black & Cherry Red is Active */
+[data-theme="jet-cherry"] .bg-\[\#F3EEE3\] {
+  background-color: var(--bg-canvas);
+}
+
+[data-theme="jet-cherry"] .bg-\[\#FAF7F0\] {
+  background-color: var(--bg-elevated);
+}
+
+[data-theme="jet-cherry"] .bg-\[\#E6DFD1\] {
+  background-color: var(--bg-muted);
+}
+
+[data-theme="jet-cherry"] .bg-\[\#E6DFD1\]\/60,
+[data-theme="jet-cherry"] .bg-\[\#E6DFD1\]\/65,
+[data-theme="jet-cherry"] .bg-\[\#E6DFD1\]\/70 {
+  background-color: rgba(30, 30, 34, 0.78);
+}
+
+[data-theme="jet-cherry"] .bg-\[\#111111\] {
+  background-color: var(--terminal-bg);
+}
+
+[data-theme="jet-cherry"] .bg-\[\#111111\]\/80 {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="jet-cherry"] .bg-\[\#111111\]\/75 {
+  background-color: rgba(0, 0, 0, 0.82);
+}
+
+[data-theme="jet-cherry"] .bg-\[\#111111\]\/50 {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+[data-theme="jet-cherry"] .bg-\[\#FAF7F0\]\/10:hover,
+[data-theme="jet-cherry"] .hover\:bg-\[\#FAF7F0\]\/10:hover {
+  background-color: rgba(244, 244, 246, 0.12);
+}
+
+[data-theme="jet-cherry"] .text-\[\#111111\] {
+  color: var(--text-primary);
+}
+
+[data-theme="jet-cherry"] .text-\[\#524E48\] {
+  color: var(--text-muted);
+}
+
+[data-theme="jet-cherry"] .text-\[\#F3EEE3\] {
+  color: var(--terminal-text);
+}
+
+[data-theme="jet-cherry"] .text-\[\#F3EEE3\]\/70,
+[data-theme="jet-cherry"] .text-\[\#F3EEE3\]\/75,
+[data-theme="jet-cherry"] .text-\[\#F3EEE3\]\/80 {
+  color: rgba(244, 244, 246, 0.76);
+}
+
+[data-theme="jet-cherry"] .text-\[\#FAF7F0\] {
+  color: var(--accent-contrast);
+}
+
+[data-theme="jet-cherry"] .text-\[\#FAF7F0\]\/85,
+[data-theme="jet-cherry"] .text-\[\#FAF7F0\]\/90 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="jet-cherry"] .border-\[\#111111\] {
+  border-color: var(--border-primary);
+}
+
+[data-theme="jet-cherry"] .border-r-2.border-\[\#111111\],
+[data-theme="jet-cherry"] .border-b-2.border-\[\#111111\],
+[data-theme="jet-cherry"] .border-t-2.border-\[\#111111\],
+[data-theme="jet-cherry"] .border-l-2.border-\[\#111111\] {
+  border-color: var(--border-primary);
+}
+
+[data-theme="jet-cherry"] .border-\[\#111111\]\/15,
+[data-theme="jet-cherry"] .border-\[\#111111\]\/20,
+[data-theme="jet-cherry"] .border-\[\#111111\]\/25,
+[data-theme="jet-cherry"] .border-\[\#111111\]\/30,
+[data-theme="jet-cherry"] .border-\[\#111111\]\/40 {
+  border-color: rgba(138, 141, 147, 0.28);
+}
+
+[data-theme="jet-cherry"] .border-\[\#F3EEE3\]\/20,
+[data-theme="jet-cherry"] .border-\[\#F3EEE3\]\/30,
+[data-theme="jet-cherry"] .border-\[\#FAF7F0\]\/30 {
+  border-color: rgba(138, 141, 147, 0.35);
+}
+
+[data-theme="jet-cherry"] .bg-\[\#D9541E\] {
+  background-color: var(--accent-primary);
+}
+
+[data-theme="jet-cherry"] .hover\:bg-\[\#BF4615\]:hover,
+[data-theme="jet-cherry"] .hover\:bg-\[\#D9541E\]:hover {
+  background-color: var(--accent-primary-hover);
+}
+
+[data-theme="jet-cherry"] .group:hover .group-hover\:bg-\[\#D9541E\] {
+  background-color: var(--accent-primary);
+}
+
+[data-theme="jet-cherry"] .group:hover .group-hover\:text-\[\#FAF7F0\] {
+  color: var(--accent-contrast);
+}
+
+[data-theme="jet-cherry"] .hover\:text-\[\#FAF7F0\]:hover {
+  color: var(--accent-contrast);
+}
+
+[data-theme="jet-cherry"] .text-\[\#D9541E\] {
+  color: var(--accent-primary);
+}
+
+[data-theme="jet-cherry"] .border-\[\#D9541E\] {
+  border-color: var(--accent-primary);
+}
+
+[data-theme="jet-cherry"] .fill-\[\#D9541E\] {
+  fill: var(--accent-primary);
+}
+
+[data-theme="jet-cherry"] .fill-\[\#FAF7F0\] {
+  fill: var(--accent-contrast);
+}
+
+[data-theme="jet-cherry"] .decoration-\[\#D9541E\] {
+  text-decoration-color: var(--accent-primary);
+}
+
+[data-theme="jet-cherry"] .hover\:text-\[\#111111\]:hover {
+  color: var(--text-primary);
+}
+
+[data-theme="jet-cherry"] .hover\:bg-\[\#E6DFD1\]:hover {
+  background-color: var(--bg-muted);
+}
+
+[data-theme="jet-cherry"] .hover\:bg-\[\#FAF7F0\]:hover {
+  background-color: var(--bg-elevated);
+}
+
+[data-theme="jet-cherry"] .hover\:bg-\[\#F3EEE3\]:hover {
+  background-color: var(--bg-canvas);
+}
+
+[data-theme="jet-cherry"] .shadow-\[2px_2px_0px_\#111111\] {
+  box-shadow: 2px 2px 0px var(--shadow-offset);
+}
+
+[data-theme="jet-cherry"] .shadow-\[3px_3px_0px_\#111111\] {
+  box-shadow: 3px 3px 0px var(--shadow-offset);
+}
+
+[data-theme="jet-cherry"] .shadow-\[4px_4px_0px_\#111111\] {
+  box-shadow: 4px 4px 0px var(--shadow-offset);
+}
+
+[data-theme="jet-cherry"] .shadow-\[4px_4px_0px_\#D9541E\] {
+  box-shadow: 4px 4px 0px var(--accent-primary);
+}
+
+[data-theme="jet-cherry"] .shadow-\[6px_6px_0px_\#111111\] {
+  box-shadow: 6px 6px 0px var(--shadow-offset);
+}
+
+/* Inner Terminal Readability in Jet Black & Cherry Mode */
+[data-theme="jet-cherry"] #terminal-container .bg-\[\#111111\] {
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+}
+
+[data-theme="jet-cherry"] #terminal-container .text-\[\#D9541E\] {
+  color: var(--terminal-accent);
+}
+
+[data-theme="jet-cherry"] #terminal-container .caret-\[\#D9541E\] {
+  caret-color: var(--terminal-accent);
+}
+
+[data-theme="jet-cherry"] #terminal-container .bg-\[\#222222\] {
+  background-color: #1E1E22;
+  border-color: rgba(138, 141, 147, 0.45);
+  color: var(--terminal-text);
+}
+
+[data-theme="jet-cherry"] #terminal-container .bg-\[\#222222\]:hover {
+  background-color: var(--accent-primary);
+  color: var(--accent-contrast);
+}
+
+[data-theme="jet-cherry"] .ring-\[\#D9541E\] {
+  --tw-ring-color: var(--accent-primary);
+}
+
+[data-theme="jet-cherry"] .ring-offset-2 {
+  --tw-ring-offset-color: var(--bg-elevated);
+}
